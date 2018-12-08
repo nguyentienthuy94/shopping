@@ -1,0 +1,31 @@
+@import "variables";
+
+app-register {
+  section {
+    height: auto;
+
+    .top {
+      border-bottom: solid 1px;
+      border-bottom-color: #6f8fb1;
+    }
+
+    .bottom {
+    
+      form {
+        width: 100%;
+        label {
+          span {
+            color: red;
+          }
+        }
+        .right{
+            background-color: #fafafa;
+            .titleRight{
+                text-align: right !important;
+            }
+        }
+      }
+    }
+
+  }
+}
