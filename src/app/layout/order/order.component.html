@@ -1,3 +1,47 @@
-<p>
-  order works!
-</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-4 left">
+        <div class="title"> SẢN PHẨM BIOWISH</div>
+        <div class="menuLeft" *ngFor="let item of menuLeft">
+          <div class="textMenu">
+            {{item.title}}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-8 right">
+        <div class="title">
+          PHÂN LOẠI: TẤT CẢ SẢN PHẨM
+        </div>
+        <div class="product">
+          <div class="row">
+            <div class="cardProduct col-12 col-md-12 col-lg-6" *ngFor="let item of fakeProduct" >
+              <div class="titleProduct">
+                {{item.name}}
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="imgLeft col-3">
+                    <img src="{{item.img}}" alt="">
+                  </div>
+                  <div class="contentRight col-9">
+                    <div class="descriptionP">
+                      {{item.description}}
+                    </div>
+                    <div class="priceP">
+                      {{item.price}}
+                    </div>
+                    <button class="buttonP">
+                      MUA NGAY
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

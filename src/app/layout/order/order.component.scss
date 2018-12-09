@@ -1,0 +1,39 @@
+app-order {
+  section {
+    .container {
+      .row {
+        .left {}
+
+        .right {
+          .title {}
+
+          .product {
+            .row {
+              .cardProduct {
+                .titleProduct {}
+
+                .item {
+                  .row {
+                    .imgLeft {
+                      img {
+                        width: 100px;
+                      }
+
+                      .contentRight {
+                        .descriptionP {}
+
+                        .priceP {}
+
+                        .buttonP {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
