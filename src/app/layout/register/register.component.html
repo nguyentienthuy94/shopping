@@ -5,11 +5,11 @@
       <div class="description">Đăng ký tài khoản để mua hàng và được hộ trợ tốt hơn !</div>
     </div>
     <div class="bottom">
-
       <form>
         <div class="row">
           <div class="col-12 col-md-12 col-lg-6 left">
-            <div class="form-group">
+            <div></div>
+            <div class="form-group email">
               <label for="email">Địa chỉ Email <span>*</span></label>
               <input type="text" class="form-control" id="email" required>
             </div>
@@ -43,33 +43,80 @@
             </div>
             <div class="radioCheck">
               <div class="form-group">
-                <label for="fullName">Giới tính <span>*</span></label>
-                <input type="radio" value="male" name="gender" required> Male
-                <input type="radio" value="female" name="gender" required> Female
+                <label for="gender">Giới tính <span>*</span></label>
+                <input type="radio" value="male" name="gender" required> Nam
+                <input type="radio" value="female" name="gender" required> Nữ
               </div>
             </div>
             <div class="form-group">
-                    <label for="name">Số điện thoại <span>*</span></label>
-                    <input type="number" class="form-control" id="phone" >
+              <label for="name">Số điện thoại <span>*</span></label>
+              <input type="number" class="form-control" id="phone" />
             </div>
             <div class="form-group">
-                    <input type="radio" value="confirmClient" name="confirmClient" > Bạn có là khách hàng của AGRIBANK.
+              <input type="checkbox" value="confirmClient" name="confirmClient"> Bạn có là khách hàng của AGRIBANK.
             </div>
           </div>
           <div class="col-12 col-md-12 col-lg-6 right">
-              <div class="titleRight">Thông tin bổ sung</div>
+            <div class="titleRight">Thông tin bổ sung</div>
             <div class="form-group">
               <label for="address">Địa chỉ <span>*</span></label>
-              <input type="text" class="form-control" id="address" >
+              <div class="row">
+                <div class="col-lg-4">
+                  <select class="form-control" id="Provide" required>
+                    <option hidden [value]="" selected>Tỉnh/Thành</option>
+                    <option *ngFor="let pow of listProvide" [value]="pow">{{pow.name}}</option>
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                  <select class="form-control" id="District" required>
+                    <option hidden [value]="" selected>Quận/Huyện</option>
+                    <option *ngFor="let pow of listDistrict" [value]="pow">{{pow.name}}</option>
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                  <select class="form-control" id="Wards" required>
+                    <option hidden [value]="" selected>Xã/Phường</option>
+                    <option *ngFor="let pow of listWards" [value]="pow">{{pow.name}}</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <div class="form-group">
-              <label for="alterEgo">Alter Ego</label>
-              <input type="text" class="form-control" id="alterEgo">
+              <label for="village">Thôn Ấp</label>
+              <input type="text" class="form-control" id="village">
             </div>
+
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ao-bat">Số ao bạt</label>
+                  <input type="text" class="form-control" id="ao-bat">
+                </div>
+              </div>
+              <div class="col-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ao-dat">Số ao đất</label>
+                  <input type="text" class="form-control" id="ao-dat">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="who">Bạn là ai ?</label>
+              <input type="radio" value="sales-agents" name="who" required><span>Đại lí bán hàng</span>
+              <input type="radio" value="client" name="who" required><span>Khách hàng trực tiếp</span>
+            </div>
+
+            <div class="form-group">
+                <label for="code">Mã giới thiệu (nếu có)</label>
+                <input type="text" class="form-control" id="code">
+              </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <a href="" class="btn btn-4"><span>TẠO TẠI KHOẢN</span></a> 
+        <!-- <button type="submit">TẠO TẠI KHOẢN</button>
+        <button type="back">Trở về trang đăng nhập</button> -->
       </form>
 
 
