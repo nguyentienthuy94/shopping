@@ -1,0 +1,30 @@
+@import "variables";
+app-shopping-cart {
+  section {
+    .title {
+      color: #10467c;
+      font-weight: 400;
+
+      span {
+        font-size: 28px;
+        vertical-align: sub;
+      }
+    }
+
+    .div-table {
+      @include tablet-and-mobile {
+        overflow: scroll;
+      }
+
+      .scroll-table {
+        @include tablet-and-mobile {
+          width: 1000px;
+
+        }
+        .product{
+            
+        }
+      }
+    }
+  }
+}

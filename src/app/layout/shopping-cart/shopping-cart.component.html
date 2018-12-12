@@ -1,36 +1,55 @@
 <section>
   <div class=container>
     <div class="title">
-      GIỎ HÀNG CỦA BẠN
+      <span><i class="icon ion-md-cart"></i></span>GIỎ HÀNG CỦA BẠN
     </div>
-    <div class="listItem">
-        <!-- <div class="row">
-          <div class="checked">
-          </div>
-          <div class="info">
-            Thông tin sản phẩm
-          </div>
-          <div class="amount">
-            Số lượng
-          </div>
-          <div class="price">
-          </div>
-        </div> -->
-          <div class="row">
-            <div class="col-1">
-              1 of 3
-            </div>
-            <div class="col-4">
-                Thông tin sản phẩm
-            </div>
-            <div class="col-3">
-                Số lượng
-            </div>
-            <div class="col-4">
-               Thành tiền
+    <div class="div-table">
+      <div class="scroll-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <td><input type="checkbox" checked="checked"><span class="checkmark">Thông tin sản phẩm</span></td>
+              <td>Số lượng</td>
+              <td>Thành tiền</td>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of fakeProduct">
+            <tr>
+              <div class="row product">
+                <input type="checkbox" checked="checked">
+                <div class="item">
+                  <div class="titleItem">
+                  </div>
+                  <div class="bodyItem">
+                    <div class="row">
+                      <div class="img">
+                        <img src="{{item.img}}" alt="">
+                      </div>
+                      <div class="content">
+                          <div class="price">
+                              {{item.price}}
+                          </div>
+                          <div class="description">
+                              {{item.description}}
+                          </div>
+                          <div class="delete">
+                            <span><i class="icon ion-ios-trash"></i></span> Xóa khỏi giỏ hàng
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </div>
+
+
+
+            </tr>
+            <tr></tr>
+            <tr></tr>
+          </tbody>
+        </table>
       </div>
+    </div>
   </div>
 
 </section>
